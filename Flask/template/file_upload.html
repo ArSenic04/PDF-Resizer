@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<b>
+    <form action={{url}} method="post" enctype="multipart/form-data">
+
+        {% if url=="/merge" %}
+        <input type="file" name="file" multiple>
+        <input type="submit" value={{name}}>
+        <br><br>
+        {% endif %}
+
+
+        {% if url=="/imagetopdf" %}
+        <input type="file" name="file" multiple>
+        <input type="submit" value={{name}}>
+        <br><br>
+        {% endif %}
+
+        {% if url=="/extract" %}
+        <input type="file" name="file">
+        <input type="submit" value={{name}}>
+        <br><br>
+        {% endif %}
+
+
+        {% if url=="/convert" %}
+        <input type="file" name="file" multiple>
+        <input type="submit" value={{name}}>
+        <br><br>
+        <label for="dpi">DPI</label>
+        <input type="number" name="dpi">
+        <br><br>
+        {% endif %}
+
+
+        {% if url=="/rotate" %}
+        <input type="file" name="file" multiple>
+        <input type="submit" value={{name}}>
+        <br><br>
+        <label for="angle">Angle</label>
+        <input type="number" name="angle">
+        <br><br>
+        {% endif %}
+
+
+        {% if url=="/split" %}
+        <input type="file" name="file" multiple>
+        <input type="submit" value={{name}}>
+        <br><br>
+
+        {% endif %}
+        
+
+        {% if url=="/deletepages" %}
+        <input type="file" name="file" multiple>
+        <input type="submit" value={{name}}>
+        <br><br>
+
+        <label for="pages">Enter No. Pages to delete</label>
+        <input type="number" name="pages">
+        {% endif %}
+
+        {% if url=="/crop" %}
+        <input type="file" name="file" multiple>
+        <br><br>
+        <label for="left">Left:</label>
+        <input type="text" name="left"><br><br>
+        <label for="top">Top:</label>
+        <input type="text" name="top"><br><br>
+        <label for="right">Right:</label>
+        <input type="text" name="right"><br><br>
+        <label for="bottom">Bottom:</label>
+        <input type="text" name="bottom"><br><br>
+        
+        <input type="submit" value={{name}}>
+        {% endif %}
+        {% if url=='/docx' %}
+        <input type="file" name="file">
+        <input type="submit" value={{name}}>
+        <br><br>
+        {% endif %}
+
+    </form>
+
+    </body>
+
+</html>
